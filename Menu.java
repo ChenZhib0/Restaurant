@@ -1,55 +1,48 @@
-import java.util.ArrayList;
 import java.util.Scanner;
-
 public class Menu {
-    private String group;
-    private String cuisine;
-    private double money;
-    private double money1;
-
-    public Menu() {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("欢迎来到菜单示例！");
+        while (true) {
+            System.out.println("请选择一个操作：");
+            System.out.println("1. 显示商品列表");
+            System.out.println("2. 添加商品");
+            System.out.println("3. 删除商品");
+            System.out.println("4. 退出菜单");
+            int choice = scanner.nextInt();
+            switch (choice) {
+                case 1:
+                    displayProducts();
+                    break;
+                case 2:
+                    addProduct();
+                    break;
+                case 3:
+                    deleteProduct();
+                    break;
+                case 4:
+                    System.out.println("感谢您使用菜单示例！再见！");
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("无效的选择，请重新输入。");
+            }
+        }
     }
-
-    public Menu(String group,String cuisine, double money,double money1) {
-        this.cuisine = cuisine;
-        this.money = money;
-        this.money1 = money1;
+    // 显示商品列表
+    public static void displayProducts() {
+        System.out.println("商品列表：");
+        // 在此处添加展示商品的代码
     }
-
-    public String getGroup() {
-        return group;
+    // 添加商品
+    public static void addProduct() {
+        System.out.println("添加商品：");
+        // 在此处添加添加商品的代码
     }
-
-    public void setGroup(String group) {
-        this.group = group;
+    // 删除商品
+    public static void deleteProduct() {
+        System.out.println("删除商品：");
+        // 在此处添加删除商品的代码
     }
-
-    public String getCuisine() {
-        return cuisine;
-    }
-
-    public void setCuisine(String cuisine) {
-        this.cuisine = cuisine;
-    }
-
-    public double getMoney() {
-        return money;
-    }
-
-    public void setMoney(double money) {
-        this.money = money;
-    }
-
-
-    public double getMoney1() {
-        return money1;
-    }
-
-    public void setMoney1(double money1) {
-        this.money1 = money1;}
-
-
-
-
-
 }
+
