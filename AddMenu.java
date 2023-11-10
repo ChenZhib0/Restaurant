@@ -80,19 +80,19 @@ public class AddMenu {
     public void showMenu(String group){
         for (int i = 0; i <menus.size(); i++) {
             Menu menu=menus.get(i);
-            //if(menu.getGroup().equals(group)){
+            if(menu.getGroup().equals(group)){
               System.out.println(menu.getCuisine());
               System.out.println(menu.getMoney());
-              System.out.println("-----------");//}
+              System.out.println("-----------");}
         }
     }
     public void showMenu1(String group){
         for (int i = 0; i <menus.size(); i++) {
             Menu menu=menus.get(i);
-            //if(menu.getGroup().equals(group)){
+            if(menu.getGroup().equals(group)){
               System.out.println(menu.getCuisine());
               System.out.println(menu.getMoney1());
-              System.out.println("-----------");//}
+              System.out.println("-----------");}
         }
     }
 
