@@ -15,6 +15,7 @@ public class Order {
         System.out.println("You are...");
         System.out.println("1.customer");
         System.out.println("2.manager");
+        System.out.println("3.break");
         int command=input.nextInt();
         switch (command){
             case 1:
@@ -58,9 +59,8 @@ public class Order {
                             System.out.println("Please choose one");
                     }
                 }
-
-
-
+            case 3:
+                break;
 
 
         }
