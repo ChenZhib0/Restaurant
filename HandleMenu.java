@@ -6,24 +6,7 @@ public class HandleMenu {
 
     Scanner input=new Scanner(System.in);
 
-    public void initialMenu(){
-        Menu menu=new Menu();
-        String group="meat";
-        menu.setGroup(group);
-        String name ="111";
-        menu.setCuisine(name);
-        double money=15.00;
-        menu.setMoney(money);
-        double money1=12.00;
-        menu.setMoney1(money1);
-        menus.add(menu);
 
-
-
-
-
-
-    }
     public void addMenu(){
         Menu menu=new Menu();
             System.out.println("choose group(meat/fish/vegetable/snack/drinks)");
