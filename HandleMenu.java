@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class AddMenu {
+public class HandleMenu {
     private ArrayList<Menu> menus=new ArrayList<>();
 
     Scanner input=new Scanner(System.in);
@@ -80,16 +80,17 @@ public class AddMenu {
     public void showMenu(String group){
         for (int i = 0; i <menus.size(); i++) {
             Menu menu=menus.get(i);
-            if(menu.getGroup().equals(group)){
+            if(menu.getGroup().contains(group)){
               System.out.println(menu.getCuisine());
               System.out.println(menu.getMoney());
               System.out.println("-----------");}
         }
     }
+
     public void showMenu1(String group){
         for (int i = 0; i <menus.size(); i++) {
             Menu menu=menus.get(i);
-            if(menu.getGroup().equals(group)){
+            if(menu.getGroup().contains(group)){
               System.out.println(menu.getCuisine());
               System.out.println(menu.getMoney1());
               System.out.println("-----------");}
