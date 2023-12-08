@@ -1,5 +1,3 @@
-import java.lang.reflect.Member;
-import java.time.Year;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -7,7 +5,7 @@ public class Order {
     private ArrayList<Account> accounts =new ArrayList<>();
     private ArrayList<Menu> menus=new ArrayList<>();
 
-    AddMenu addMenu=new AddMenu();
+    HandleMenu handleMenu =new HandleMenu();
     private Scanner input=new Scanner(System.in);
     //欢迎界面
     public void start(){
@@ -47,11 +45,11 @@ public class Order {
                     int command1 = input.nextInt();
                     switch (command1) {
                         case 1:
-                            addMenu.addMenu();
+                            handleMenu.addMenu();
                             start();
                             break;
                         case 2:
-                            addMenu.deleteMenu();
+                            handleMenu.deleteMenu();
                             start();
                             break;
 
@@ -154,9 +152,9 @@ public class Order {
         while(true){
             System.out.println("Which group do you want to choose?(meat/fish/vegetable/snack/drinks)");
             String group=input.next();
-            addMenu.showMenu(group);
+            handleMenu.showMenu(group);
             String name1 = input.next();
-            double money=addMenu.getCuisineByName(name1);
+            double money= handleMenu.getCuisineByName(name1);
             if(money!=0){
                 total+=money;
                 System.out.println("order successfully! Total money=" + total);
@@ -181,9 +179,9 @@ public class Order {
         while (true) {
             System.out.println("Which group do you want to choose?(meat/fish/vegetable/snack/drinks)");
             String group=input.next();
-            addMenu.showMenu1(group);
+            handleMenu.showMenu1(group);
             String name1 = input.next();
-            double money = addMenu.getCuisineByName1(name1);
+            double money = handleMenu.getCuisineByName1(name1);
             if (money != 0) {
                 total += money;
                 System.out.println("order successfully! Total money=" + total);
@@ -198,6 +196,11 @@ public class Order {
             }
         }
     }
+
+
+
+}
+
 
 
 
