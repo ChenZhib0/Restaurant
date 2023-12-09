@@ -182,7 +182,7 @@ public class Order {
                 os.write(bytes);
                 os.write("\r\n".getBytes());
                 os.close();
-                break;
+                start();
             }
         }
 
