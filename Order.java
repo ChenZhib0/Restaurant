@@ -1,14 +1,25 @@
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Order {
     private ArrayList<Account> accounts =new ArrayList<>();
     private ArrayList<Menu> menus=new ArrayList<>();
-
+    OutputStream os = new FileOutputStream("src\\bill",true);
     HandleMenu handleMenu =new HandleMenu();
     private Scanner input=new Scanner(System.in);
+
+    public Order() throws IOException {
+        byte[] bytes="111".getBytes();
+        os.write(bytes);
+        os.write("\r\n".getBytes());
+
+    }
+
     //欢迎界面
-    public void start(){
+    public void start() throws IOException {
         System.out.println("====Welcome to Hello world!====");
         System.out.println("You are...");
         System.out.println("1.customer");
@@ -65,7 +76,7 @@ public class Order {
     }
 
     //登录
-    private void login(){
+    private void login() throws IOException {
         System.out.println("====sign in====");
         if(accounts.size()==0){
             return;
@@ -145,7 +156,7 @@ public class Order {
 
 
 
-    private void buy() {
+    private void buy() throws IOException {
         double total=0;
         System.out.println("order what you like");
 
@@ -166,13 +177,18 @@ public class Order {
             String ans=input.next();
             if(ans.equals("N")){
                 System.out.println("The dishes will be served soon.Please wait a moment,thank you!");
+                String total1=String.valueOf(total);
+                byte[] bytes=total1.getBytes();
+                os.write(bytes);
+                os.write("\r\n".getBytes());
+                os.close();
                 break;
             }
         }
 
 
     }
-    private void buy1() {
+    private void buy1() throws IOException {
         double total = 0;
         System.out.println("order what you like");
 
@@ -192,15 +208,15 @@ public class Order {
             String ans = input.next();
             if (ans.equals("N")) {
                 System.out.println("The dishes will be served soon.Please wait a moment,thank you!");
+                String total1=String.valueOf(total);
+                byte[] bytes=total1.getBytes();
+                os.write(bytes);
+                os.write("\r\n".getBytes());
+                os.close();
                 start();
             }
         }
     }
-
-
-
-}
-
 
 
 
