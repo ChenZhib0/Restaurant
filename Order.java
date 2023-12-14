@@ -8,13 +8,12 @@ public class Order {
     private ArrayList<Account> accounts =new ArrayList<>();
     private ArrayList<Menu> menus=new ArrayList<>();
     OutputStream os = new FileOutputStream("src\\bill",true);
+
     HandleMenu handleMenu =new HandleMenu();
     private Scanner input=new Scanner(System.in);
 
     public Order() throws IOException {
-        byte[] bytes="111".getBytes();
-        os.write(bytes);
-        os.write("\r\n".getBytes());
+
 
     }
 
@@ -57,19 +56,23 @@ public class Order {
                     switch (command1) {
                         case 1:
                             handleMenu.addMenu();
-                            start();
+
                             break;
                         case 2:
                             handleMenu.deleteMenu();
-                            start();
+
                             break;
 
                         default:
-                            System.out.println("Please choose one");
+                            start();
+                            break;
                     }
                 }
             case 3:
-                break;
+                System.out.println("===================END==================");
+                os.close();
+                System.exit(0);
+
 
 
         }
@@ -181,7 +184,6 @@ public class Order {
                 byte[] bytes=total1.getBytes();
                 os.write(bytes);
                 os.write("\r\n".getBytes());
-                os.close();
                 start();
             }
         }
@@ -212,7 +214,6 @@ public class Order {
                 byte[] bytes=total1.getBytes();
                 os.write(bytes);
                 os.write("\r\n".getBytes());
-                os.close();
                 start();
             }
         }
