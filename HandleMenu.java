@@ -9,7 +9,7 @@ public class HandleMenu {
 
     public void addMenu(){
         Menu menu=new Menu();
-            System.out.println("choose group(meat/fish/vegetable/snack/drinks/low fat/sweet/spicy/sour/salty)");
+            System.out.println("choose group(meat/fish/vegetable/snack/drinks/diet/sweet/spicy/sour/salty)");
             String group = input.next();
             menu.setGroup(group);
 
