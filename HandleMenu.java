@@ -27,7 +27,7 @@ public class HandleMenu {
             double money = input.nextDouble();
             menu.setMoney(money);
 
-            //System.out.println("input money1");
+
             double money1 = money*0.8;
             menu.setMoney1(money1);
 
