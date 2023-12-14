@@ -167,7 +167,7 @@ public class Order {
         System.out.println("order what you like");
 
         while(true){
-            System.out.println("Which group do you want to choose?(meat/fish/vegetable/snack/drinks/low fat/sweet/spicy/sour/salty)");
+            System.out.println("Which group do you want to choose?(meat/fish/vegetable/snack/drinks/diet/sweet/spicy/sour/salty)");
             String group=input.next();
             handleMenu.showMenu(group);
             String name1 = input.next();
@@ -198,7 +198,7 @@ public class Order {
         System.out.println("order what you like");
 
         while (true) {
-            System.out.println("Which group do you want to choose?(meat/fish/vegetable/snack/drinks/low fat/sweet/spicy/sour/salty)");
+            System.out.println("Which group do you want to choose?(meat/fish/vegetable/snack/drinks/diet/sweet/spicy/sour/salty)");
             String group=input.next();
             handleMenu.showMenu1(group);
             String name1 = input.next();
