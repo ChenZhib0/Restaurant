@@ -7,6 +7,12 @@ public class HandleMenu {
     Scanner input=new Scanner(System.in);
 
 
+
+
+
+
+
+
     public void addMenu(){
         Menu menu=new Menu();
             System.out.println("choose group(meat/fish/vegetable/snack/drinks/low fat/sweet/spicy/sour/salty)");
@@ -20,6 +26,7 @@ public class HandleMenu {
             System.out.println("input money");
             double money = input.nextDouble();
             menu.setMoney(money);
+
 
             double money1 = money*0.8;
             menu.setMoney1(money1);
