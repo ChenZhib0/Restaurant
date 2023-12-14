@@ -1,3 +1,4 @@
+import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.io.OutputStream;
@@ -7,7 +8,9 @@ import java.util.Scanner;
 public class Order {
     private ArrayList<Account> accounts =new ArrayList<>();
     private ArrayList<Menu> menus=new ArrayList<>();
-    OutputStream os = new FileOutputStream("src\\bill",true);
+
+    OutputStream os = new FileOutputStream("bill",true);
+
 
     HandleMenu handleMenu =new HandleMenu();
     private Scanner input=new Scanner(System.in);
